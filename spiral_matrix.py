@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-'''
-This funny piece of code forms a square with side equal to input int
-and fills it with numbers from 1 to (side ** 2) in form
-of a spiral.
-'''
-side = int(input('Please input number of columns/rows: '))
+import sys
+if len(sys.argv) > 1:
+    if sys.argv[1].isdigit():
+        side = int(sys.argv[1])
+else:
+    side = int(input('Please input number of columns/rows: '))
 
-m = [[0 for column in range(side)] for row in range(side)]  
-num = 1
-offset = 0
+m = [[0 for column in range(side)] for row in range(side)]  # form the array
+num = 1  # set the first number
+offset = 0  # we'll need this to fill the matrix properly
 
 while side >= 1:
     for i in range(side):  # this fills upper quarter and center of the array
@@ -25,8 +25,15 @@ while side >= 1:
         num += 1
     offset += 1
     side -= 2
-
+   
 for y in range(len(m)):  #let's print out the result
     for x in range(len(m[0])):
         print(m[y][x], end = '\t')
     print('\n')
+        
+    
+    
+
+
+    
+    
