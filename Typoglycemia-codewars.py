@@ -42,6 +42,3 @@ def scramble_words(words):
         result = [l if not l.isalpha() else srtd_letters.pop(0) for l in word]
         out.append("".join(result))
     return " ".join(out)
-    
-print("My output:", scramble_words('professionals'))
-print(scramble_words("---abacsd-df-"))
