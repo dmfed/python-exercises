@@ -6,8 +6,8 @@ def myclosure():
         return val
     return add
 
-pos = myclosure()
+cl = myclosure()
 
-print(pos(1), pos(1)) 
+print(cl(1), cl(1), cl(1)) 
 
 
