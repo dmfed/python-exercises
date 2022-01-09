@@ -18,15 +18,15 @@ try:
         end = time.time()
         if ans != x * y:
             print(f"НЕПРАВИЛЬНО. {x} * {y} = {x*y}")
-            time.sleep(1)
+            WRONG += 1
             continue
         print("ВЕРНО!")
         COUNT += 1
         TIME += end - start
-        time.sleep(1) 
 except:
-    print(f'''\n
-Ты верно решил {COUNT} примеров и ошибся {WRONG} раз. 
-На один пример ты тратил в среднем {int(TIME/COUNT)} секунд.''') 
+    print(f'\nТы верно решил {COUNT} примеров и ошибся {WRONG} раз.')
+    if COUNT == 0:
+        COUNT = 1
+    print(f'На один пример ты тратил в среднем {int(TIME/COUNT)} секунд.') 
 
      
