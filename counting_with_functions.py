@@ -62,8 +62,11 @@ def divided_by(val):
         return result
     return wrapper
 
-# print(zero(), two())
-print(five(times(two())))
+if __name__ == '__main__':
+    # print(zero(), two())
+    print(five(times(two())))
+    print(nine(minus(three())))
+
 
     
         
